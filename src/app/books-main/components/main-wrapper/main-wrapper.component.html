@@ -1,0 +1,28 @@
+<div>
+    
+    <div class="search-wrapper">
+        <input (keyup)="search($event)" type="text" placeholder="Search">
+    </div>
+
+    <div class="icon add">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="openDialog('add')">add</mat-icon>
+    </div>
+
+
+    <div *ngIf="filteredBooks" class="list-wrapper">
+        <div *ngFor="let item of filteredBooks">
+            <app-book-card
+                [name]="item.name"
+                [author]="item.author"
+                [price]="item.price"
+                [image]="item.image"
+                [id]="item.id"
+                [createdAt]="item.createdAt"
+                (eventDone)="getBooksData()"
+            ></app-book-card>
+        </div>
+    </div>
+    
+    
+    
+</div>

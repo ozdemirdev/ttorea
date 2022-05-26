@@ -1,0 +1,19 @@
+<div class="card-body">
+    <div class="image-wrapper">
+        <img [src]="image" alt="">
+    </div>
+    <div class="text-box-wrapper">
+        <div class="header">{{name}}</div>
+        <div class="author">{{author}}</div>
+        
+        <div class="price">Price: {{price}}</div>
+    </div>
+    <div class="panel-wrapper">
+        <div class="edit-panel">
+            <div class="icon edit" (click)="openDialog('edit')"><mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon></div>
+            <div class="icon delete" (click)="deleteBook()"><mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon></div>
+        </div>
+    </div>
+</div>
+
+
